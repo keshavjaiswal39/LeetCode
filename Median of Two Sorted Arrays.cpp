@@ -19,6 +19,7 @@ public:
         
         double ans=0.0;
 
+		// In case any one of the array has no element then we find median for the other element
         if(n1==0)
         {
             return n2%2==0?(((double)nums2[n2/2-1]+(double)nums2[n2/2])/2):(double)nums2[n2/2];
@@ -28,6 +29,7 @@ public:
         {
             return n1%2==0?(((double)nums1[n1/2-1]+(double)nums1[n1/2])/2):(double)nums1[n1/2];
         }
+        
         
         int l=0;
         int h=n1;
@@ -47,6 +49,7 @@ public:
             {
                 h=cut1-1;
             }
+            
             else if(l2>r1)
             {
                 l=cut1+1;
